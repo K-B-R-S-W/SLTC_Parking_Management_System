@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./Assests/css/dashboard.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>dashboard</title>
+  </head>
+  <body>
+    <!-- CONTENT -->
+    <section id="content">
+     
+      <!-- NAVBAR -->
+      <nav id="navbar">
+       
+        <a href="#"><img src="./Assests/img/128731220181106.webp" alt="Logo" id="logo"></a>
+
+        <div class="dropdown">
+          <a href="#" class="profile">
+            <img src="/Assests/img/ppl.webp" onclick="toggleMenu()" />
+          </a>
+          <div class="profile-sub-menu-wrap" id="subMenu">
+            <div class="profile-sub-menu">
+              <div class="user-info">
+                <div class="user-image">
+                  <img src="/Assests/img/ppl.webp" alt="user" />
+                  <h2>Profile</h2>
+                </div>
+              
+                <hr />
+
+                <a href="./editProfile.html" class="sub-menu-link">
+                  <img src="/Assests/icons/profile.png" alt="" />
+                  <p>Edit Profile</p>
+                  <span>></span>
+                </a>
+
+                <a href="mailto:admin@sltc-carpark.com?subject=Seeking%20Admin%20Help" class="sub-menu-link">
+                  <img src="/Assests/icons/help.png" alt="" />
+                  <p>Help & Support</p>
+                  <span>></span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                  <img src="/Assests/icons/logout.png" alt="" />
+                  <p>Log Out</p>
+                  <span>></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <hr />
+      <ul id="pages">
+        <li class="pages-item">
+          <a href="dashboard.html">Home</a>
+        </li>
+
+        <li class="pages-item">
+          <a href="qr.html">QR Code</a>
+        </li>
+
+        <li class="pages-item">
+          <a href="aboutUs.html">About US</a>
+        </li>
+      </ul>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3 id="slot_count">1020</h3>
+              <p>Available Parking Slots</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bx-right-top-arrow-circle"></i>
+            <span class="text">
+              <h3 id="slot_number">E-12</h3>
+              <p>Your Slot Number</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-dollar-circle"></i>
+            <span class="text">
+              <h3 id="payment">Rs.400</h3>
+              <p id="payment_status">Pending to Pay</p>
+            </span>
+          </li>
+        </ul>
+      </main>
+      <!-- MAIN -->
+    
+    </section>
+    <!-- CONTENT -->
+    <script type="module" src="./Assests/js/config.js"></script>
+    <script src="./Assests/js/menu.js"></script>
+    <script type="module" src="./Assests/js/dashboard.js"></script>
+
+  </body>
+</html>

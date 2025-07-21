@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Login</title>
+  </head>
+  <body style="background-color: #ebebeb">
+    <div class="flex flex-col items-center justify-center h-screen ">
+      <div
+        class="w-full max-w-lg h-200 bg-white rounded-xl border border-gray-30 shadow-xl shadow-md p-8"
+      >
+        <h2 class="text-2xl font-bold text-gray-900 mb-8 pl-1">Login</h2>
+        <form 
+        class="flex flex-col px-1 my-6" 
+        id="loginForm"
+        action="#"
+        method="#"
+        >
+          <input
+            type="text"
+            id="email"
+            class="bg-gray-100 text-gray-900 border-0 rounded-md p-3 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+            placeholder="Email address"
+          />
+          <span id="emailError" class="text-red-500 text-sm mb-2 hidden"
+            >Please enter a valid email address</span
+          >
+          <input
+            type="password"
+            id="password"
+            class="bg-gray-100 text-gray-900 border-0 rounded-md p-3 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+            placeholder="Password"
+          />
+          <span id="passwordError" class="text-red-500 text-sm mb-2 hidden"
+            >Please enter a password</span
+          >
+          <div
+            class="flex items-center justify-between flex-wrap my-2 login-center"
+          >
+            <label
+              for="remember-me"
+              class="text-sm text-gray-900 cursor-pointer"
+            >
+              <input type="checkbox" id="remember-me" class="mr-2 mt-4" />
+              Remember me
+            </label>
+            <a
+              href="mailto:admin@sltc-carpark.com?subject=Recover%20Forgotten%20Password"
+              class="text-sm text-blue-500 hover:underline mb-0.5 mt-4 ml-7"
+              >Forgot password?</a
+            >
+            <div>
+              <p class="text-gray-900 mt-6 mb-4">
+                Don't have an account?
+                <a
+                  href="/register.html"
+                  class="text-sm text-blue-500 -200 hover:underline mt-6 mb-4"
+                  >Signup</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150 my-2"
+          >
+            Login
+          </button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="./Assests/js/config.js"></script>
+    <script type="module" src="./Assests/js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+    <!-- <link rel="stylesheet" href="qr.css"> -->
+    <link rel="stylesheet" href="./Assests/css/dashboard.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>QR CODE</title>
+</head>
+<body style="background-color: #ebebeb">
+    <section id="content">
+     
+        <!-- NAVBAR -->
+        <nav id="navbar">
+         
+          <a href="#"><img src="./Assests/img/128731220181106.webp" alt="Logo" id="logo"></a>
+  
+          <div class="dropdown">
+            <a href="#" class="profile">
+              <img src="/Assests/img/ppl.webp" onclick="toggleMenu()" />
+            </a>
+            <div class="profile-sub-menu-wrap" id="subMenu">
+              <div class="profile-sub-menu">
+                <div class="user-info">
+                  <div class="user-image">
+                    <img src="/Assests/img/ppl.webp" alt="user" />
+                    <h2>Profile</h2>
+                  </div>
+                
+                  <hr />
+  
+                  <a href="./editProfile.html" class="sub-menu-link">
+                    <img src="/Assests/icons/profile.png" alt="" />
+                    <p>Edit Profile</p>
+                    <span>></span>
+                  </a>
+  
+                  <a href="mailto:admin@sltc-carpark.com?subject=Seeking%20Admin%20Help" class="sub-menu-link">
+                    <img src="/Assests/icons/help.png" alt="" />
+                    <p>Help & Support</p>
+                    <span>></span>
+                  </a>
+  
+                  <a href="#" class="sub-menu-link">
+                    <img src="/Assests/icons/logout.png" alt="" />
+                    <p>Log Out</p>
+                    <span>></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <hr />
+        <ul id="pages">
+          <li class="pages-item">
+            <a href="dashboard.html">Home</a>
+          </li>
+  
+          <li class="pages-item">
+            <a href="qr.html">QR Code</a>
+          </li>
+  
+          <li class="pages-item">
+            <a href="aboutUs.html">About US</a>
+          </li>
+        </ul>
+        <!-- NAVBAR -->
+     <div class="flex flex-col items-center justify-center mt-10">
+        <div class="flex flex-col items-center justify-center w-full max-w-lg h-200 bg-white rounded-xl border border-gray-30 shadow-xl shadow-md p-2">
+            <img id="qrImage" src="/Assests/img/pngwing.com.png" alt="QRCODE">
+        </div>
+        <div class="btn">
+            <button id="btnGenerateQr" type="submit"
+            
+            class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-20 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150 my-2"
+          
+            >Regenarate</button>
+        </div>
+    </div>
+    </section>
+    <script type="module" src="./Assests/js/config.js"></script>
+    <script src="./Assests/js/menu.js"></script>
+    <script type="module" src="./Assests/js/qr.js"></script>
+</body>
+</html>

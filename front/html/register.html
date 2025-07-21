@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body style="background-color: #ebebeb;">
+  <div class="flex flex-col items-center justify-center h-screen">
+    <div class="w-full max-w-lg bg-white rounded-xl border border-gray-30 shadow-xl p-8">
+      <h2 class="text-2xl font-bold text-gray-900 mb-4">Register</h2>
+      <form class="flex flex-col" id="registerForm">
+        <label class="text-md mb-2 text-gray-900 cursor-pointer" for="user">User</label>
+        <select class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" id="user">
+          <option value="STUDENT">Student</option>
+          <option value="LECTURE">Lecturer</option>
+          <option value="VISITOR">Visitor</option>
+          <option value="SHUTTLE_SERVICE">Shuttle Service</option>
+        </select>
+        <input placeholder="Your Name" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" id="name">
+        <span id="nameError" class="text-red-500 text-sm mb-2 hidden">Please enter your name</span>
+        <input placeholder="Student ID" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" id="uniId">
+        <span id="uniIdError" class="text-red-500 text-sm mb-2 hidden">Please fill this field</span>
+        <input placeholder="Email" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" id="email">
+        <span id="emailError" class="text-red-500 text-sm mb-2 hidden">Please enter a valid email address</span>
+        <input placeholder="Password" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="password" id="password">
+        <span id="passwordError" class="text-red-500 text-sm mb-2 hidden">Please enter a password</span>
+        <label class="text-md mb-2 text-gray-900 cursor-pointer" for="vehicle-type">Vehicle Type</label>
+        <select class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" id="vehicle-type">
+          <option value="REGULAR">Regular</option>
+          <option value="ELECTRIC">Electric</option>
+          <option value="HANDI_CAP">Handicap</option>
+        </select>
+        <input placeholder="Vehicle Number" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" id="vehicleNumber">
+        <span id="vehicleNumberError" class="text-red-500 text-sm mb-2 hidden">Please enter your vehicle number</span>
+        <input placeholder="Vehicle Brand" class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" type="text" id="vehicleBrand">
+        <span id="vehicleBrandError" class="text-red-500 text-sm mb-2 hidden">Please enter your vehicle brand</span>
+        <p class="text-gray-900 mt-4">Already have an account? <a class="text-sm text-blue-500 -200 hover:underline mt-4" href="./login.html">Login</a></p>
+        <button class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150" type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="./Assests/js/config.js"></script>
+  <script type="module" src="./Assests/js/register.js"></script>
+
+
+</body>
+</html>

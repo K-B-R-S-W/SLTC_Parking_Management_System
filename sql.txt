@@ -1,0 +1,77 @@
+create database parking;
+
+use parking;
+
+create table user
+(
+    id       varchar(6)                                                not null
+        primary key,
+    name     varchar(45)                                               null,
+    email    varchar(255)                                              null,
+    type     enum ('VISITOR', 'STUDENT', 'LECTURE', 'SHUTTLE_SERVICE') null,
+    password varchar(20)                                               null,
+    nic      varchar(12)                                               null
+);
+
+create table vehicle
+(
+    id             int auto_increment
+        primary key,
+    brand          varchar(20)                               null,
+    u_id           varchar(6)                                null,
+    type           enum ('ELECTRIC', 'REGULAR', 'HANDI_CAP') null,
+    vehicle_number varchar(255)                              null,
+    constraint vehicle_ibfk_1
+        foreign key (u_id) references user (id)
+            on update cascade on delete cascade
+);
+
+create index u_id
+    on vehicle (u_id);
+
+create table slots
+(
+    id     int auto_increment
+        primary key,
+    type   enum ('ELECTRIC', 'REGULAR', 'HANDI_CAP') null,
+    status enum ('Y', 'N')                           null
+);
+
+
+create table slot_vehicle
+(
+    id     int auto_increment
+        primary key,
+    v_id   int             null,
+    s_id   int             null,
+    day    datetime(6)     null,
+    r_time time            null,
+    status enum ('Y', 'N') null,
+    constraint slot_vehicle_ibfk_1
+        foreign key (v_id) references vehicle (id)
+            on update cascade on delete cascade,
+    constraint slot_vehicle_ibfk_2
+        foreign key (s_id) references slots (id)
+            on update cascade on delete cascade
+);
+
+create index s_id
+    on slot_vehicle (s_id);
+
+create index v_id
+    on slot_vehicle (v_id);
+
+create table cost
+(
+    id     int            not null
+        primary key,
+    amount decimal(38, 2) null,
+    r_time time           null,
+    constraint cost_ibfk_1
+        foreign key (id) references slot_vehicle (id)
+            on update cascade on delete cascade
+);
+
+
+
+
