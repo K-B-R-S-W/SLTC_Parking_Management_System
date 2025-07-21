@@ -124,9 +124,9 @@ This project is licensed under the **MIT License**. See the LICENSE file for det
 ## 📮 Support
 
 - **📧 Email:** [k.b.ravindusankalpaac@gmail.com](mailto:k.b.ravindusankalpaac@gmail.com)  
-- **🐞 Bug Reports:** [GitHub Issues](https://github.com/K-B-R-S-W/AI_image_Generator/issues)  
-- **📚 Documentation:** See the project [Wiki](https://github.com/K-B-R-S-W/AI_image_Generator/wiki)  
-- **💭 Discussions:** Join the [GitHub Discussions](https://github.com/K-B-R-S-W/AI_image_Generator/discussions)
+- **🐞 Bug Reports:** [GitHub Issues](https://github.com/K-B-R-S-W/SLTC_Parking_Management_System/issues)  
+- **📚 Documentation:** See the project [Wiki](https://github.com/K-B-R-S-W/SLTC_Parking_Management_System/wiki)  
+- **💭 Discussions:** Join the [GitHub Discussions](https://github.com/K-B-R-S-W/SLTC_Parking_Management_System/discussions)
 
 ---
 
